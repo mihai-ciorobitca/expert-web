@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="css/bootstrap-4.3.1.css">
+</head>
+
+<body>
+  
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10">
+          <h1 class="">Maintenance</h1>
+        </div>
+        <div class="d-flex flex-column justify-content-center col-md-2 align-items-center">
+          <div class="btn-group">
+            {% if maintenance_status %}
+              <a href="/admin/change-maintenance" class="btn btn-primary">OFF</a>
+            {% else %}
+              <a href="/admin/change-maintenance" class="btn btn-secondary">ON</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+

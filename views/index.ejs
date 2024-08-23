@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    type="text/css">
+  <link rel="icon" href="assets/logo.png">
+  <title>Home</title>
+  <link rel="stylesheet" href="css/bootstrap-4.3.1.css">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .navbar-light .navbar-toggler {
+      border: 1px solid #ffc107;
+    }
+
+    .custom-toggler .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='%23ffc107' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    body,
+    body *:not(.fa):not(.fas):not(.far):not(.fal):not(.fab) {
+      font-family: monospace !important;
+    }
+
+    #pricing .col-lg-4 {
+      display: flex;
+    }
+
+    #pricing .card-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  </style>
+  <meta name="description"
+    content="Join Mihai, an experienced Python developer, to learn Python programming and web development. Our courses cover everything from basic Python concepts to advanced topics like web scraping, API creation, and deploying websites at no cost. Start building your own website with comprehensive guidance and support.">
+  <meta name="keywords"
+    content="Python programming, learn Python, Python courses, web development, build websites, web scraping, API creation, Flask, FastAPI, hosting websites, beginner Python, advanced Python, programming courses, Mihai, Python developer, online Python courses, coding classes, Google Meet classes, Visual Studio Code, GitHub portfolio, coding projects">
+  <link rel="stylesheet" href="assets/roadmap.css">
+</head>
+
+<body class="text-white text-monospace"
+  style="	background-image: linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0.75));	background-position: top left;	background-size: 100%;	background-repeat: repeat;">
+  <nav class="navbar navbar-expand-md navbar-light my-3">
+    <div class="container"> <a class="navbar-brand text-primary" href="#">
+        <b class="text-warning"><b> Python with Mihai</b></b>
+        <img src="assets/logo.png" width="30" height="30" class="d-inline-block align-top" alt=""></a> <button
+        class="navbar-toggler navbar-toggler-right custom-toggler" type="button" data-toggle="collapse"
+        data-target="#navbar4">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar4">
+        <ul class="navbar-nav ml-auto">
+          <% if (username) { %>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="/workbook"><b>Workbook</b></a>
+            </li>
+          <% } %>
+          <% if (admin) { %>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="/admin"><b>Admin</b></a>
+            </li>
+          <% } %>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#courses"><b>Courses</b></a>
+            </li>
+            <li class="nav-item text-white">
+              <a class="nav-link text-white" href="#pricing">Pricing</a>
+            </li>
+            <li class="nav-item text-white">
+              <a class="nav-link text-warning" href="/login"><b>Login</b></a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="modal p-2" id="contactModal" style="">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content"
+        style="	border-top-left-radius: 20px;	border-top-right-radius: 20px;	border-bottom-left-radius: 20px;	border-bottom-right-radius: 20px;">
+        <div class="modal-header text-warning bg-primary"
+          style="	border-top-left-radius: 20px;	border-top-right-radius: 20px;">
+          <h5 class="modal-title text-dark" id="contactModalLabel" style=""><b class="text-white">Contact me</b></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body bg-primary">
+          <p class="lead my-2 text-white"><b>I am available to answer on Whatsapp, Phone or Email</b></p>
+        </div>
+        <div class="modal-footer d-flex justify-content-around bg-primary"
+          style="	border-bottom-left-radius: 20px;	border-bottom-right-radius: 20px;">
+          <a class="btn btn-warning text-dark" href="https://wa.me/+40725497858"
+            style="	border-top-left-radius: 10px;	border-top-right-radius: 10px;	border-bottom-left-radius: 10px;	border-bottom-right-radius: 10px;"><i
+              class="fa fa-fw fa-whatsapp"></i><b><b>&nbsp;Whatsapp</b></b></a>
+          <a class="btn text-dark btn-warning" href="tel:+40725497858"
+            style="	border-top-left-radius: 10px;	border-top-right-radius: 10px;	border-bottom-left-radius: 10px;	border-bottom-right-radius: 10px;"><i
+              class="fa fa-fw fa-phone"></i><b><b>&nbsp;Call</b></b></a>
+          <a class="btn text-dark btn-warning" href="mailto:mihai.ciorobitca@student.tuiasi.ro"
+            style="	border-top-left-radius: 10px;	border-top-right-radius: 10px;	border-bottom-left-radius: 10px;	border-bottom-right-radius: 10px;"><i
+              class="fa fa-fw fa-envelope"></i><b><b>&nbsp;Email</b></b></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center text-white h-100 align-items-center d-flex py-3" style="">
+    <div class="container mx-auto">
+      <div class="row" style="">
+        <div class="col-12 col-sm-12 p-3 col-lg-6 col-md-12" style="">
+          <h2 class="text-left text-warning mb-4" style=""><b>Build your website<br>with Python</b></h2>
+          <p class="lead text-left" style="	max-width: 500px;">My name is Mihai, I am Python developer and I want to
+            teach you how to think like a programmer.<br><br>With me you can learn Python developing and finally to
+            build your own website with NO additional cost.<br><br></p>
+        </div>
+        <div class="col-sm-12 col-12 col-lg-6 col-md-12 pt-0 px-4" style=""><img class="d-block img-fluid"
+            src="assets/roadmap.png" style=""></div>
+      </div>
+    </div>
+  </div>
+  <div class="py-3" id="about" style="">
+    <div class="container">
+      <div class="row">
+        <div class="text-center col-md-12">
+          <h2 class="text-warning my-4"><b>About websites</b></h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-md-6 p-3" style="">
+          <div class="card bg-light border-0"
+            style="	border-top-left-radius: 20px;	border-top-right-radius: 20px;	border-bottom-left-radius: 20px;	border-bottom-right-radius: 20px;">
+            <div class="card-body p-4 bg-danger border-danger"
+              style="	border-top-left-radius: 20px;	border-top-right-radius: 20px;	border-bottom-left-radius: 20px;	border-bottom-right-radius: 20px;">
+              <div class="row">
+                <div class="col-8 col-md-12">
+                  <h2 class="mb-0 text-warning" style=""><b>Myths</b></h2>
+                </div>
+              </div>
+              <p class="lead my-3" contenteditable="true"><b>Expensive to host</b></p>
+              <p class="lead my-3"><b>Hard to design</b></p>
+              <p class="lead my-3"><b>Difficult to develop</b></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 p-3" style="">
+          <div class="card bg-light border-0"
+            style="	border-top-left-radius: 20px;	border-top-right-radius: 20px;	border-bottom-left-radius: 20px;	border-bottom-right-radius: 20px;">
+            <div class="card-body p-4 bg-primary"
+              style="	border-top-left-radius: 20px;	border-top-right-radius: 20px;	border-bottom-left-radius: 20px;	border-bottom-right-radius: 20px;">
+              <div class="row">
+                <div class="col-8 col-md-12">
+                  <h2 class="mb-0 text-warning"><b>Truths</b></h2>
+                </div>
+              </div>
+              <p class="lead my-3"><b>Hosting is FREE</b></p>
+              <p class="lead my-3"><b>Designing is easy</b></p>
+              <p class="lead my-3">Everybody can develop</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-3" id="courses" style="">
+    <div class="container">
+      <div class="row d-flex flex-row" style="">
+        <div class="px-4 mx-auto col-12 col-sm-6 col-md-6 col-lg-4" style="	max-width: 500px;	min-width: 300px;">
+          <div class="d-flex flex-column col-lg-12 text-center justify-content-start p-4" style="">
+            <h2 class="text-warning my-4 text-center"><b>Starter</b></h2>
+            <p class="lead text-center">Basic of Python</p>
+            <p class="lead text-center">Debugging code</p>
+            <p class="lead text-center" style="">Deploy on cloud</p>
+            <p class="lead text-center">Think as a dev</p>
+          </div>
+        </div>
+        <div class="mx-auto px-4 col-12 col-sm-6 col-md-6 col-lg-4" style="	max-width: 500px;	min-width: 300px;">
+          <div class="d-flex flex-column col-lg-12 justify-content-start text-center p-4">
+            <h2 class="text-warning my-4 text-center"><b>Advanced</b></h2>
+            <p class="lead text-center">Complex Python</p>
+            <p class="lead text-center" style="">Learn to plot data</p>
+            <p class="lead text-center">Send emails</p>
+            <p class="lead text-center">Telegram bots</p>
+          </div>
+        </div>
+        <div class="mx-auto px-4 col-12 col-md-12 col-sm-12 col-lg-4" style="	max-width: 500px;	min-width: 300px;">
+          <div class="d-flex flex-column justify-content-start text-center p-4" style="">
+            <h2 class="text-warning my-4 text-center"><b>Web Python</b></h2>
+            <p class="lead text-center">Website hosting</p>
+            <p class="lead text-center" style="">Web scraping</p>
+            <p class="lead text-center">Website APIs</p>
+            <p class="lead text-center" style="">Google protection&nbsp;</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-3" id="pricing">
+    <div class="container">
+      <div class="row">
+        <div class="text-center mx-auto col-md-12 text-warning" style="">
+          <h2 class="text-warning my-4"><b>Pricing</b></h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-lg-6 col-md-12 col-sm-12 p-4" style="">
+          <div class="card text-center bg-primary"
+            style="	border-top-left-radius: 20px;	border-top-right-radius: 20px;	border-bottom-left-radius: 20px;	border-bottom-right-radius: 20px;">
+            <div class="card-header p-3">
+              <h4 class="text-left my-2 text-white"><i class="fa fa-fw fa-graduation-cap"></i><b>&nbsp;Starter</b>
+              </h4>
+              <div class="d-flex align-items-center">
+                <h1 class="text-left text-white mb-0"><b class="">$10/h</b></h1>
+              </div>
+            </div>
+            <div class="card-body p-3">
+              <ul class="list-unstyled my-3 text-left">
+                <li class="lead my-2"><i class="fa fa-fw fa-check"></i><b>&nbsp;Variables in Python</b></li>
+                <li class="lead my-2"><i class="fa fa-fw fa-check"></i><b>&nbsp;Condition statement</b></li>
+                <li class="lead my-2"><i class="fa fa-fw fa-check"></i><b>&nbsp;Repetetive loop</b></li>
+                <li class="lead my-2"><i class="fa fa-fw fa-check"></i><b>&nbsp;Working with strings</b></li>
+                <li class="lead my-2"><i class="fa fa-fw fa-check"></i><b>&nbsp;Iterator objects</b></li>
+                <li class="lead my-2"><i class="fa fa-fw fa-check"></i><b>&nbsp;Working with modules</b></li>
+                <li class="lead my-2"><i class="fa fa-fw fa-check"></i><b>&nbsp;Reading and writing files</b></li>
+              </ul> <a class="btn btn-warning btn-block text-white" href="https://t.me/+Q24h4_xeVTU2ZmU0"
+                style="	border-top-left-radius: 10px;	border-top-right-radius: 10px;	border-bottom-left-radius: 10px;	border-bottom-right-radius: 10px;"><b
+                  class="text-dark"><b>Join</b></b></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-12 col-sm-12 col-md-12 p-4" style="">
+          <div class="card text-center bg-primary"
+            style="	border-top-left-radius: 20px;	border-top-right-radius: 20px;	border-bottom-left-radius: 20px;	border-bottom-right-radius: 20px;">
+            <div class="card-header p-3">
+              <h4 class="text-left mr-3 mb-0 my-2 text-white"><i class="fa fa-fw fa-gears"></i><b>&nbsp;Advanced</b>
+              </h4>
+              <div class="d-flex align-items-center">
+                <h1 class="text-left text-white mb-0"><b class="">$12/h</b></h1>
+              </div>
+            </div>
+            <div class="card-body p-3">
+              <ul class="list-unstyled my-3 text-left">
+                <li class="lead my-2"><i class="fa fa-fw fa-check"></i><b>&nbsp;Json and csv files</b></li>
+                <li class="lead my-2"><i class="fa fa-fw fa-check"></i><b>&nbsp;Decorating a function</b></li>
+                <li class="lead my-2"><i class="fa fa-fw fa-check"></i><b>&nbsp;Use of lambda functions</b></li>
+                <li class="lead my-2"><i class="fa fa-fw fa-check"></i><b>&nbsp;Plotting and statistics</b></li>
+                <li class="lead my-2"><i class="fa fa-fw fa-check"></i><b>&nbsp;Sending emails</b></li>
+                <li class="lead my-2"><i class="fa fa-fw fa-check"></i><b>&nbsp;Regular expressions</b></li>
+                <li class="lead my-2"><i class="fa fa-fw fa-check"></i><b>&nbsp;Telegram bots</b></li>
+              </ul> <a class="btn btn-warning btn-block text-white" href="https://t.me/+wWL3v77woOdmMWU8"
+                style="	border-top-left-radius: 10px;	border-top-right-radius: 10px;	border-bottom-left-radius: 10px;	border-bottom-right-radius: 10px;"><b><b
+                    class="text-dark">Join</b></b></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12 p-4 mx-auto" style="">
+          <div class="card text-center bg-primary"
+            style="	border-top-left-radius: 20px;	border-top-right-radius: 20px;	border-bottom-left-radius: 20px;	border-bottom-right-radius: 20px;">
+            <div class="card-header p-3">
+              <h4 class="text-left mr-3 mb-0 my-2 text-white" contenteditable="true"><i
+                  class="fa fa-fw fa-desktop"></i><b>&nbsp;Web dev</b></h4>
+              <div class="d-flex align-items-center">
+                <h1 class="text-left text-white mb-0"><b class="">$14/h</b></h1>
+              </div>
+            </div>
+            <div class="card-body p-3">
+              <ul class="list-unstyled my-3 text-left">
+                <li class="lead my-2"><i class="fa fa-fw fa-check"></i><b><b><span
+                        style="font-weight: normal;">&nbsp;Host website in Flask</span></b></b></li>
+                <li class="lead my-2"><i class="fa fa-fw fa-check"></i><b><b><span
+                        style="font-weight: normal;">&nbsp;Design in Bootstrap</span></b></b></li>
+                <li class="lead my-2"><i class="fa fa-fw fa-check"></i><b>&nbsp;Add MongoDB database</b></li>
+                <li class="lead my-2"><i class="fa fa-fw fa-check"></i><b>&nbsp;Build APIs using FastAPI</b></li>
+                <li class="lead my-2"><i class="fa fa-fw fa-check"></i><b>&nbsp;Create webscraper</b></li>
+                <li class="lead my-2"><i class="fa fa-fw fa-check"></i><b>&nbsp;Add reCaptcha protection</b></li>
+                <li class="lead my-2"><i class="fa fa-fw fa-check"></i><b>&nbsp;Use Google auth&nbsp;</b></li>
+              </ul> <a class="btn btn-warning btn-block text-white" href="https://t.me/+UwiKhD89heIxMjE0"
+                style="	border-top-left-radius: 10px;	border-top-right-radius: 10px;	border-bottom-left-radius: 10px;	border-bottom-right-radius: 10px;"><b><b
+                    class="text-dark">Join</b></b></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center py-3" style="" id="tools">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto" style="">
+          <h2 class="text-warning my-4"><b>Tools</b></h2>
+          <div class="row">
+            <div class="col-12 p-4 col-sm-6 col-md-6 col-lg-4 d-flex flex-column justify-content-between"> <i
+                class="d-block fa fa-4x mb-3 fa-video-camera text-white"></i>
+              <h5> <b>One-to-one meeting</b></h5>
+              <p class="mx-auto my-3" style="	max-width: 250px;">Classes will take place on Google Meet platform</p><a
+                class="btn btn-warning btn-block text-white" href="https://meet.google.com/"
+                style="	border-top-left-radius: 10px;	border-top-right-radius: 10px;	border-bottom-left-radius: 10px;	border-bottom-right-radius: 10px;"><b
+                  class="text-dark"><b>Visit website</b></b></a>
+            </div>
+            <div class="p-4 col-12 col-md-6 col-sm-6 col-lg-4 flex-column d-flex justify-content-between" style=""> <i
+                class="d-block fa fa-4x mb-3 fa-code text-white"></i>
+              <h5><b>Easy development</b></h5>
+              <p class="my-3 mx-auto" style="	max-width: 250px;">Developing using Visual Studio Code editor</p><a
+                class="btn btn-warning btn-block text-white" href="https://code.visualstudio.com/download"
+                style="	border-top-left-radius: 10px;	border-top-right-radius: 10px;	border-bottom-left-radius: 10px;	border-bottom-right-radius: 10px;"><b
+                  class="text-dark"><b>Download</b></b></a>
+            </div>
+            <div class="p-4 col-12 col-sm-6 col-md-6 mx-auto col-lg-4 d-flex flex-column justify-content-between"> <i
+                class="fa mb-3 fa-4x fa-github text-white"></i>
+              <h5><b>Online portofolio</b></h5>
+              <p class="my-3 mx-auto" style="	max-width: 250px;">Your projects will be deployed on Github platform</p><a
+                class="btn btn-warning btn-block text-white" href="https://github.com/signup"
+                style="	border-top-left-radius: 10px;	border-top-right-radius: 10px;	border-bottom-left-radius: 10px;	border-bottom-right-radius: 10px;"><b
+                  class="text-dark"><b>Sign up</b></b></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p class="mb-0">© 2024 Ciorobitca Mihai. All rights reserved</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"
+    style=""></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <a id="openModalButton" class="btn navbar-btn ml-md-2 p-1 btn-warning text-dark"
+    style="cursor:pointer;position: fixed;bottom: 20px;right:20px;padding:4px;"><b><b>Contact me</b></b></a>
+  <script>
+    document.getElementById('openModalButton').addEventListener('click', function () {
+      $('#contactModal').modal('show');
+    });
+  </script>
+
+</body>
+
+</html>
